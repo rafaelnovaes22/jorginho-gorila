@@ -163,19 +163,14 @@ a{color:inherit}
 </section>
 <div class="ag rv">
 <div>
-<h2 class="d">Preencha e <em>caia para dentro.</em></h2>
-<p>Descreva seu objetivo que a equipe chama no WhatsApp com os próximos passos. Sem enrolação.</p>
+<h2 class="d">Conheça o time e <em>faça sua inscrição.</em></h2>
+<p>A inscrição acontece na página oficial, onde você informa seus objetivos e contatos.</p>
 <p><b style="color:var(--lm)">Online para todo o Brasil.</b><br>Comece na próxima segunda.</p>
 </div>
-<form class="fm" id="fm">
-<label for="fn">Seu nome</label>
-<input id="fn" type="text" placeholder="Como podemos chamar você" required autocomplete="name">
-<label for="fs">Objetivo</label>
-<select id="fs"><option>Emagrecer</option><option>Hipertrofia</option><option>Os dois</option><option>Condicionamento</option></select>
-<label for="fms">Situação atual</label>
-<textarea id="fms" rows="3" placeholder="Idade, rotina, onde treina"></textarea>
-<button class="bt bt1" type="submit">Quero entrar →</button>
-</form>
+<div class="fm" id="registration">
+<p>Abra a inscrição oficial para conhecer o acompanhamento e preencher seus dados.</p>
+<a class="bt bt1" href="https://jlteam.my.canva.site/entrar-para-o-time" target="_blank" rel="noopener">Abrir inscrição oficial →</a>
+</div>
 </div>
 <section class="sc">
 <div class="sc-h rv"><h2 class="d">Dúvidas comuns</h2><span>faq</span></div>
@@ -212,7 +207,6 @@ var mqt=$("#mqt");mqt.innerHTML+=mqt.innerHTML;
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}})},{threshold:.12});
 $$(".rv").forEach(function(el){io.observe(el)});
 $$(".fq-i").forEach(function(it){var q=$(".fq-q",it),a=$(".fq-a",it);q.addEventListener("click",function(){var open=it.classList.contains("o");$$(".fq-i.o").forEach(function(o){o.classList.remove("o");$(".fq-a",o).style.maxHeight="0"});if(!open){it.classList.add("o");a.style.maxHeight=a.scrollHeight+"px"}})});
-$("#fm").addEventListener("submit",function(e){e.preventDefault();toast("Inscrição recebida! Complete no link Entrar para o time.")});
 function toast(m){var t=document.createElement("div");t.textContent=m;t.style.cssText="position:fixed;left:50%;bottom:2rem;transform:translateX(-50%);background:#c8f542;color:#0e0f0c;font-weight:800;padding:1rem 1.8rem;border-radius:999px;z-index:99";document.body.appendChild(t);setTimeout(function(){t.remove()},3000)}
 $("#yr").textContent=new Date().getFullYear();
 })();
